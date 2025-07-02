@@ -1,4 +1,4 @@
-package com.common.api;
+package com.onlinechat.chatroom.common.api;
 
 
 public enum ResultCode implements IResultCode {

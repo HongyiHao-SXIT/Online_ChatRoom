@@ -1,25 +1,8 @@
-/*
- Navicat Premium Data Transfer
-
- Source Server         : localhost
- Source Server Type    : MySQL
- Source Server Version : 80035
- Source Host           : localhost:3306
- Source Schema         : y0698
-
- Target Server Type    : MySQL
- Target Server Version : 80035
- File Encoding         : 65001
-
- Date: 08/12/2024 14:27:16
-*/
-
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+CREATE DATABASE IF NOT EXISTS ChatRoom;
 
--- ----------------------------
--- Table structure for comment
--- ----------------------------
+USE ChatRoom;
 DROP TABLE IF EXISTS `comment`;
 CREATE TABLE `comment`  (
   `id` int(0) NOT NULL AUTO_INCREMENT,
@@ -31,9 +14,6 @@ CREATE TABLE `comment`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 45 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
--- ----------------------------
--- Table structure for room
--- ----------------------------
 DROP TABLE IF EXISTS `room`;
 CREATE TABLE `room`  (
   `id` int(0) NOT NULL AUTO_INCREMENT,
@@ -42,9 +22,6 @@ CREATE TABLE `room`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
--- ----------------------------
--- Table structure for user
--- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`  (
   `id` int(0) NOT NULL AUTO_INCREMENT,

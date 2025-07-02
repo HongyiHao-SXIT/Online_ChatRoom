@@ -1,8 +1,8 @@
-package com.common.exception;
+package com.onlinechat.chatroom.common.exception;
 
 
-import com.common.api.IResultCode;
-import com.common.api.ResultCode;
+import com.onlinechat.chatroom.common.api.IResultCode;
+import com.onlinechat.chatroom.common.api.ResultCode;
 
 
 public class ServiceException extends RuntimeException {

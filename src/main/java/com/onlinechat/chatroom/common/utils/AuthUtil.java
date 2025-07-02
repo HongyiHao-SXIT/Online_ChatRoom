@@ -1,7 +1,7 @@
-package com.common.utils;
+package com.onlinechat.chatroom.common.utils;
 
-import com.common.exception.ServiceException;
-import com.entity.User;
+import com.onlinechat.chatroom.common.exception.ServiceException;
+import com.onlinechat.chatroom.entity.User;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;

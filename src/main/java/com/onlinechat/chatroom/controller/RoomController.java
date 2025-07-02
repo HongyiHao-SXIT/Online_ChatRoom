@@ -1,4 +1,4 @@
-package com.controller;
+package com.onlinechat.chatroom.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.common.api.R;

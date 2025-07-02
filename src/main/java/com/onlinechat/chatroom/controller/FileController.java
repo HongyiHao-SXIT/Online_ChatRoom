@@ -1,7 +1,7 @@
-package com.controller;
+package com.onlinechat.chatroom.controller;
 
-import com.common.api.R;
-import com.common.exception.ServiceException;
+import com.onlinechat.chatroom.common.api.R;
+import com.onlinechat.chatroom.common.exception.ServiceException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,7 +1,7 @@
-package com.common.exception.handler;
+package com.onlinechat.chatroom.common.exception.handler;
 
-import com.common.api.R;
-import com.common.exception.ServiceException;
+import com.onlinechat.chatroom.common.api.R;
+import com.onlinechat.chatroom.common.exception.ServiceException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

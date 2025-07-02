@@ -1,12 +1,10 @@
-package com.controller;
+package com.onlinechat.chatroom.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.common.api.R;
-import com.common.utils.AuthUtil;
-import com.entity.Comment;
-import com.entity.User;
-import com.mapper.CommentMapper;
-import com.mapper.UserMapper;
+import com.onlinechat.chatroom.mapper.UserMapper;
+import com.onlinechat.chatroom.mapper.CommentMapper;
+import com.onlinechat.chatroom.entity.Comment;
+import com.onlinechat.chatroom.entity.User;
+import com.onlinechat.chatroom.mapper.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
