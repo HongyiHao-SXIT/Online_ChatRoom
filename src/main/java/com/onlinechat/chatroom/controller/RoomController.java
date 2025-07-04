@@ -1,23 +1,17 @@
 package com.onlinechat.chatroom.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.common.api.R;
-import com.common.utils.AuthUtil;
-import com.entity.Room;
-import com.mapper.RoomMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
+import com.onlinechat.chatroom.mapper.RoomMapper;
 
 @RestController
-@RequestMapping("room")
 public class RoomController {
 
     @Autowired
-    private RoomMapper mapper;
-
+    private RoomMapper roomMapper;
+}
+/* 
 
     @RequestMapping("/self/list")
     @ResponseBody
@@ -50,4 +44,4 @@ public class RoomController {
         return R.success("操作成功");
     }
 }
-
+*/

@@ -1,8 +1,6 @@
-package com.mapper;
-
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.entity.Room;
+package com.onlinechat.chatroom.mapper;
 
 
-public interface RoomMapper extends BaseMapper<Room> {
+public class RoomMapper {
+
 }

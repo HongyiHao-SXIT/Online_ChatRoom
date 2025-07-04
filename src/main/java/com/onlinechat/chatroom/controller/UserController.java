@@ -1,13 +1,16 @@
-package com.controller;
+package com.onlinechat.chatroom.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.common.api.R;
-import com.common.exception.ServiceException;
-import com.common.utils.AuthUtil;
-import com.entity.User;
-import com.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.onlinechat.chatroom.common.utils.AuthUtil;
+import com.onlinechat.chatroom.entity.Result;
+import com.onlinechat.chatroom.entity.User;
+import com.onlinechat.chatroom.service.UserService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
@@ -15,14 +18,23 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     @Autowired
-    private UserMapper userMapper;
+    private UserService userService;
 
     @GetMapping("/loginOut")
-    public R loginOut() {
+    public Result loginOut() {
         AuthUtil.clear();
-        return R.success("操作成功");
+        return Result.success();
+    }
+    @PostMapping("/login")
+    public Result login(@RequestBody User user) {
+        
+        return Result.success();
     }
 
+
+}
+
+/*
     @GetMapping("/current")
     public R current() {
         User user = AuthUtil.getUser();
@@ -70,4 +82,4 @@ public class UserController {
         return R.success("");
     }
 }
-
+*/

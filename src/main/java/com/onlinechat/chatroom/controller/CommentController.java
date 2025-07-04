@@ -1,18 +1,21 @@
 package com.onlinechat.chatroom.controller;
 
-import com.onlinechat.chatroom.mapper.UserMapper;
-import com.onlinechat.chatroom.mapper.CommentMapper;
-import com.onlinechat.chatroom.entity.Comment;
-import com.onlinechat.chatroom.entity.User;
-import com.onlinechat.chatroom.mapper.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
-import java.util.List;
+import com.onlinechat.chatroom.mapper.UserMapper;
+import com.onlinechat.chatroom.service.CommentService;
 
 @RestController
 @RequestMapping("/comment")
+public class CommentController {
+
+    @Autowired
+    private CommentService commentService;
+    private UserMapper userMapper;
+}
+/*
 public class CommentController {
 
     @Autowired
@@ -48,4 +51,4 @@ public class CommentController {
         return R.data(comments);
     }
 }
-
+*/

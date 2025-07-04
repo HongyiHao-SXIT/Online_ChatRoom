@@ -1,23 +1,37 @@
 package com.onlinechat.chatroom.controller;
 
-import com.onlinechat.chatroom.common.api.R;
-import com.onlinechat.chatroom.common.exception.ServiceException;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.*;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import javax.naming.spi.DirStateFactory.Result;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
 @RequestMapping("file")
-public class FileController {
+public class FileController{
     @PostMapping("/upload")
-    public R upload(MultipartFile file) {
+    public Result upload(@MultipartFile file) {
         InputStream in = null;
         OutputStream out = null;
 
+        try{
+            in = file.getInputStream();
+            byte[] buffer = new byte[in.available()];
+            in.read(buffer);
+        }
+        
+        return Result.success();
+    }
+    
+}
+
+/*
         try {
             in = file.getInputStream();
             byte[] buffer = new byte[in.available()];
@@ -57,4 +71,4 @@ public class FileController {
         throw new ServiceException("");
     }
 }
-
+*/
